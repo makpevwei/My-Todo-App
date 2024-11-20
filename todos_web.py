@@ -17,7 +17,7 @@ def add_todo():
 st.title("My Todo App")
 
 # Add a subheader with HTML formatting for emphasis
-st.subheader("This app is to increase your <b>productivity</b>.", unsafe_allow_html=True)
+st.subheader("This app is to increase your <b>productivity")
 
 # Display a brief description of the app's functionality
 st.write("Click on the checkbox to remove a todo.")
