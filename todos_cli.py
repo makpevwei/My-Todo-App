@@ -2,7 +2,7 @@ import time
 import os
 
 # Construct the path dynamically
-file_path = os.path.join(os.path.dirname(__file__),'todos.txt')
+file_path = os.path.join(os.path.dirname(__file__),'todos_file.txt')
 
 # Get the current date and time in a human-readable format
 NOW = time.strftime("%b %d, %Y %H:%M:%S")

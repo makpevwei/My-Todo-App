@@ -24,11 +24,11 @@ st.write("Click on the checkbox to remove a todo.")
 
 # Loop through the list of todos and display each as a checkbox
 for index, todo in enumerate(todos):
-    checkbox = st.checkbox(todo, key=todo)  # Create a checkbox for each todo item
+    # Assign a unique key by appending the index to the todo
+    checkbox = st.checkbox(todo.strip(), key=f"{todo.strip()}_{index}")
     if checkbox:  # Check if the checkbox is selected
         todos.pop(index)  # Remove the selected todo from the list
         todos_cli.write_to_todos(todos)  # Save the updated todos list back to the file
-        del st.session_state[todo]  # Remove the todo from the session state
         st.rerun()  # Reload the app to reflect changes
 
 # Add a text input field for entering new todos
